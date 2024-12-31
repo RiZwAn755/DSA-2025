@@ -6,7 +6,7 @@
 // better optimization  -> traverse from the back so that for each index i know whats in its right
 
 // lets have a stack , if stack is emepty then we nge[i] = -1 i.e no elemnt greater, and then push that element in stack 
-// on moving back if we get any number we see that is smaller than st.top(), then we assign the nge of that element to be st.top()
+// on moving back if we get any number we see that is smaller than st.top(), then we assign the nge of that element to be st.top(),
 //  if we get any element that is greater than st.top() then we pop stack untill stack gets empty or we found an element in stack that is greater than the element
 
 
