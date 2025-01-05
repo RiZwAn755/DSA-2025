@@ -1,4 +1,7 @@
 #include<bits/stdc++.h>
+#defint int long long
+#define pb push_back
+#define endl '\n'
 using namespace std ;
 
 class Solution{
@@ -26,7 +29,7 @@ class Solution{
         return nse;
     } 
 };
-int main()
+signed  main()
 {
     
 }
