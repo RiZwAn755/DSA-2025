@@ -1,4 +1,5 @@
- 
+
+
 //  previous smaller element
  // ex: n = 5 :  nums[] = {9, 6, 10, 9, 5}.
     // output : {-1,-1 , 6 ,6 ,6}.
