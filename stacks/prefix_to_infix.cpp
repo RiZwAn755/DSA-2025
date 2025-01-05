@@ -37,7 +37,7 @@ int main()
             // Form the new infix expression
             string temp = "(" + operand2 + string(1, s[i]) + operand1 + ")";
             
-            // Push the new infix expression back onto the stack
+       
             st.push(temp);
         }
     }

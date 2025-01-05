@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
 class Solution{
     
     public:
@@ -5,7 +8,7 @@ class Solution{
     { 
         vector<int>nse(n ,-1);
         stack<int>st;
-        
+
         for(int i = n-1 ; i >= 0; i--)
         {
             while(!st.empty() && st.top() >= arr[i])
@@ -23,3 +26,7 @@ class Solution{
         return nse;
     } 
 };
+int main()
+{
+    
+}
