@@ -9,7 +9,7 @@
 
 // Time complexity O(3*N) , space Cmplexity = O(2*N)
 
-#include<bits10_1.h>/stdc++.h>
+#include<bits/stdc++.h>
     #define int long long 
 using namespace std;
 
