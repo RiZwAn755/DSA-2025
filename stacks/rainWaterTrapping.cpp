@@ -54,6 +54,55 @@ public:
     }
 };
 
+
+
+// --------------------------------------avoiding the extra sapce------------------------------------------------------------------
+
+// instead of calculating both leftmax and rightMax we can only calculate min(leftmax , rightMax)
+
+
+class Solution {
+public:
+    int trap(vector<int>& h) 
+    {
+        int n = h.size();
+        int l = 0 , r = n-1 ;
+        int lmax = 0 , rmax = 0 ,  ans = 0 ;
+
+        while(l < r)
+        { 
+            if(h[l] <= h[r])
+            {
+                if(h[l] < lmax)
+                {
+                    ans += (lmax-h[l]);
+                }
+                else 
+                {
+                    lmax = h[l];
+
+                }
+                 l = l+1;
+            }
+            else 
+            {
+                if(h[r] < rmax)
+                {
+                    ans += (rmax - h[r]);
+                }
+                else
+                {
+                    rmax = h[r];
+                   
+                }
+                 r = r-1;
+            }
+        } 
+
+         return ans;
+    }
+};
+
 signed main()
 {
     
