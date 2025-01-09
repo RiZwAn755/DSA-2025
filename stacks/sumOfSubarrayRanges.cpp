@@ -39,7 +39,7 @@
 // we want subarray ranges (i.e maximum - minimum) for each sub-array 
 // i.e max of (subarray1 - minof subarray1) + (subarray2 - minof subarray2) + ....... And so on....
 // it finally comes out to be  (sum of subarray maximums - sum of subarray maximums)
-// for solving it we need to know the problem sum of subarray minimum and similiarly we can find sum of subarray maximums
+// for solving it we need to know the problem sum of subarray minimum and similiarly we can find sum of subarray maximums 
 
  class Solution {
 public:
