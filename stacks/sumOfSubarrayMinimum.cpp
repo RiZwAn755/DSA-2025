@@ -64,7 +64,7 @@ public:
 
         for (int i = 0; i < n; i++) {
             // Find previous smaller element
-            while (!st.empty() && arr[st.top()] > arr[i]) { // here we dont have equality***
+            while (!st.empty() && arr[st.top()] > arr[i]) { // here we don't have equality***
                 st.pop();
             }
 
