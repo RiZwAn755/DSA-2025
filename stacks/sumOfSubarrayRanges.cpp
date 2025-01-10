@@ -7,7 +7,8 @@
 
 // 3      max-min -> 0                              1         max-min -> 0                   2       max-min -> 0               4            max-min  ->4
 // 3 1     max-min -> 2                             1 2       max-min -> 1                   2 4      max-min -> 2 
-// 3 1 2 4    max-min -> 3                          1 2 4    max-min -> 3
+// 3 1 2     max-min ->  2                          1 2 4    max-min -> 3
+//3 1 2 4    max-min -> 3
 
 // ans is sum of all minimums = 0 + 2 + 3 + 0 + 1 + 3 + 0 + 2 + 0   => 11 this is ans  if value is large return ans my modding with 1e9+7
 
@@ -27,7 +28,6 @@
 //          smallest = min(smallest , a[j]);  
 //            sum += (largest - snmallest);        writing it inside the for loop bcoz adding each element will make new subarray       
 //     }
-
 //   
 // }
 // return sum ;
@@ -37,7 +37,7 @@
 // ----------------------------------------optimization-----------------------------------------------------------
 
 // we want subarray ranges (i.e maximum - minimum) for each sub-array 
-// i.e max of (subarray1 - minof subarray1) + (subarray2 - minof subarray2) + ....... And so on....
+// i.e  (maxof subarray1 - minof subarray1) + (maxofsubarray2 - minof subarray2) + ....... And so on....
 // it finally comes out to be  (sum of subarray maximums - sum of subarray maximums)
 // for solving it we need to know the problem sum of subarray minimum and similiarly we can find sum of subarray maximums 
 
