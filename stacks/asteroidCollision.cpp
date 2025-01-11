@@ -1,4 +1,4 @@
-
+   
 
 // In this problemwe are given an array of asteroids where asteroid[i] = direction of asteroid + magnitude of asteroid
 // positive sign means asteroid is moving in right direction and negative sign means asterois is moving in left direction
