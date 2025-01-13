@@ -2,7 +2,7 @@
 // you are given an array and an integer window_size(k)
 // you have to return an array containing maximum element in each window
 
-//  ex:
+//  ex :
 //  arr = [1 ,3 ,-1 , -3 , 5 , 3 ,2 ,1 , 6] , k = 3 
 //  ans = [3 , 3 , 5 ,5 ,5 , 3 ,6]
 
