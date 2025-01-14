@@ -80,9 +80,14 @@
         {
             l += 1;
         }
-        else 
+        else if(grid[h][l] == 1)
         {
             h -= 1;
+        }
+        else
+        {
+           l++;
+           h--;
         }
     }
 
