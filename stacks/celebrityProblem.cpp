@@ -76,13 +76,19 @@
 
     while(l < h)
     {
-        if(grid[l][h] == 1)
+        
+        if(grid[l][h] == 1) // l knows h ,it cant be celeb
         {
             l += 1;
         }
-        else 
+        else if(grid[h][l] == 1) // h knows l ,it cant be celeb
         {
             h -= 1;
+        }
+        else  // no one is celeb
+        {
+           l++;
+           h--;
         }
     }
 
