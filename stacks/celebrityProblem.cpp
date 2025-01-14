@@ -4,7 +4,7 @@
 // find the celebrity
 
 
-// # persons who know celebrity = n-1
+// # persons who know celebrity = n-1 ;
 // # person celebrity know =  0
 
 // we will create two array to store people who knows celebrity and other to store the person celebrity know
