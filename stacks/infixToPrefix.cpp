@@ -5,10 +5,9 @@
 // order =>  '()' > '^' > '*' > '+' > '-'
 
 // scan the infix from left to right
-// if s[i] is an operand add it to ans
+// if s[i] is an operand add it to answer
 // if s[i] is operator
 // {
-
 //    if  stack is empty then add it to stack
 //    else if the precedence of the stack's top is greater than s[i] then
 //    pop the stack untill the precedence of stacks top is strictly smaller than s[i]
