@@ -4,7 +4,7 @@
 // find the celebrity
 
 
-// # persons who know celebrity = n-1
+// # persons who know celebrity = n-1 ;
 // # person celebrity know =  0
 
 // we will create two array to store people who knows celebrity and other to store the person celebrity know
@@ -76,15 +76,24 @@
 
     while(l < h)
     {
-        if(grid[l][h] == 1)
+        
+        if(grid[l][h] == 1) // l knows h ,it cant be celeb
         {
             l += 1;
         }
+<<<<<<< HEAD
         else if(grid[h][l] == 1)
         {
             h -= 1;
         }
         else
+=======
+        else if(grid[h][l] == 1) // h knows l ,it cant be celeb
+        {
+            h -= 1;
+        }
+        else  // no one is celeb
+>>>>>>> abd524a625a542c70c9f96502f271e9d8a8bad3e
         {
            l++;
            h--;

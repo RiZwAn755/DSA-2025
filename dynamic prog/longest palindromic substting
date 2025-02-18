@@ -1,0 +1,142 @@
+ 
+
+ //Q1 .find the longest palindromic substring in a given string 
+
+//  Approach1 : (O)n^3
+
+// go through all substring (n^2) and check each substring if its palindrome O(n)
+
+// code : can optimize it by memoization but still not better than O(^2) and also takes extra space for dp
+
+// class Solution {
+//     public:
+        
+//         vector<vector<bool>>dp;
+//         bool ck(string s , int l , int r )
+//         {
+            
+//              if(l > r)
+//              {
+//                 return true;
+//              }
+    
+//              if(dp[l][r])
+//              {
+//                 return dp[l][r];
+//              }
+    
+//              if(s[l] == s[r])
+//              {
+//                 return dp[l][r] = ck(s, l+1 , r-1);
+//              }
+    
+//             return  dp[l][r] = false;
+        
+//         }
+    
+        
+//         string longestPalindrome(string s) 
+//         {
+//             int n = s.size() , sp = 0 , ans = 0;
+//             dp.assign(n , vector<bool>(n , false));
+          
+//            for(int i = 0; i < n ; i++)
+//            {
+//             for(int j = i ; j < n; j++)
+//             {
+                
+                
+//                 if(ck(s, i , j) == true)
+//                 {
+//                     if(j-i+1 > ans) 
+//                     {
+//                         ans = j-i+1;
+//                         sp = i ; 
+//                     }
+//                 }
+//             }
+//            }
+    
+//            return s.substr(sp , ans) ;
+        
+    
+//         }
+//     };
+
+
+
+
+// Approach 2: O(n^2) usig axis and orbit method 
+
+// here we analyze the palindromic substring in two ways 
+// 1st odd length palindromes and 2nd even length palindrome  
+
+// code  
+
+// class Solution {
+//     public:
+//         string longestPalindrome(string s) 
+//         {
+//             string res = "";
+//             int n = s.size();
+    
+//             // odd length substring
+//             for(int ax = 0 ;  ax < n ; ax++)
+//             {
+//                int orb = 1 , len = 1 ;
+    
+//                while( ax-orb >= 0 && ax + orb < n)
+//                {
+//                  if(s[ax+orb] == s[ax-orb])
+//                  {
+//                     orb++;
+//                     len += 2;
+//                  }
+//                  else
+//                  break;
+//                }
+//                if(len > res.size())
+//                {
+//                  int  lefti = ax - len/2 ;
+//                  res = s.substr(lefti , len) ;
+//                }
+//             }
+    
+    
+//             // for even length palindrome
+    
+//             // here we put axis between chars 
+    
+//             // ex: a|b|a|c
+    
+//             for( int ax = 0 ; ax < n-1 ; ax++)
+//             {
+//                 int orb = 1 ;
+//                 int len = 0 ;
+    
+//                 while((ax-orb)+1 >=0 && ax + orb< n)
+//                 {
+//                     if(s[ax-orb+1] == s[ ax + orb])
+//                     {
+//                         orb++;
+//                         len += 2;
+//                     }
+//                     else 
+//                     break;
+//                 }
+    
+//                 if(len > res.size())
+//                 {
+//                     int lefti = ax-len/2 + 1;
+//                     res = s.substr(lefti , len);
+//                 }
+//             }
+    
+//             return res;
+//         }
+//     };
+
+
+
+// This can be further optimized to O(N)
+
