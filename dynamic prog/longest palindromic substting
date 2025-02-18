@@ -2,7 +2,7 @@
 
  //Q1 .find the longest palindromic substring in a given string 
 
-//  Approach1 : (O)n^3
+//  Approach1 : O(n^3)
 
 // go through all substring (n^2) and check each substring if its palindrome O(n)
 
