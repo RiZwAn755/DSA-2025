@@ -1,6 +1,7 @@
 
 // find number of components
 
+
 // #include<bits/stdc++.h>
 // using namespace std ;
 
