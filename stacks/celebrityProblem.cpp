@@ -87,13 +87,13 @@
             h -= 1;
         }
         else
-=======
+// =======
         else if(grid[h][l] == 1) // h knows l ,it cant be celeb
         {
             h -= 1;
         }
         else  // no one is celeb
->>>>>>> abd524a625a542c70c9f96502f271e9d8a8bad3e
+// >>>>>>> abd524a625a542c70c9f96502f271e9d8a8bad3e
         {
            l++;
            h--;
