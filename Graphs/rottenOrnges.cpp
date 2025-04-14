@@ -6,7 +6,8 @@
     
 //         int dx[4] = {0, 0, -1, 1};
 //         int dy[4] = {1, -1, 0, 0};
-    
+
+
 //         // Corrected: Pass g by reference to avoid copying the whole grid
 //         int ck(int i, int j) {
 //             return (i >= 0 && i < n && j >= 0 && j < m && g[i][j] == 1 && vis[i][j] == 0);
