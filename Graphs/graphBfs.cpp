@@ -6,6 +6,7 @@
 // vector<int>visited;
 // vector<int>dist;
 
+
 // void bfs(int i)
 // {
 //     visited[i] = 1 ;
