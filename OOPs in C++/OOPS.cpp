@@ -1,5 +1,6 @@
- // oops in c++
- 
+
+// oops in c++
+
 //  object oriented programming 
 //  objects are real world entities
 //  class is blueprint of entities
