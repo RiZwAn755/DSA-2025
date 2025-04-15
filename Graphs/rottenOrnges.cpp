@@ -42,9 +42,10 @@
 //             g = grid;
 //             n = g.size();
 //             m = g[0].size();
+
 //             vis.assign(n, vector<int>(m, 0));
     
-//             queue<pair<int, int>> q;
+//             queue<pair<int, int>> q; 
 //             int fresh = 0;
     
 //             for (int i = 0; i < n; i++) {
