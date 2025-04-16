@@ -1,5 +1,5 @@
 
-// find number of components
+// find number of components(DFS)
 
 
 // #include<bits/stdc++.h>
