@@ -86,3 +86,81 @@
             
 //         }
 //     };
+
+//         ------------------------------------ optimized --------------------------------------------------
+//  in this approach we mark all zero as visited and make their deistance zero and stored them in a queue with their distance, on this queue 
+//   we will apply bfs (kinda multisource bfs) we r left with 1s only , then if we find any that is not visited thats a 1 automatically.
+// and update its distance.
+
+// class Solution {
+// public:
+//     int n, m;
+//     int dx[4] = {1, 0, -1, 0};
+//     int dy[4] = {0, -1, 0, 1};
+
+//     bool isValid(int i, int j) {
+//         return i >= 0 && i < n && j >= 0 && j < m;
+//     }
+
+//     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
+//         n = mat.size();
+//         m = mat[0].size();
+
+//         vector<vector<int>> dist(n, vector<int>(m, -1));
+//         vector<vector<int>> vis(n, vector<int>(m, 0));
+//         queue<pair<int, int>> q;
+
+//         // Start BFS from all 0s
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < m; j++) {
+//                 if (mat[i][j] == 0) {
+//                     q.push({i, j});
+//                     vis[i][j] = 1;
+//                     dist[i][j] = 0;
+//                 }
+//             }
+//         }
+
+//         while (!q.empty()) {
+//             auto [x, y] = q.front();
+//             q.pop();
+
+//             for (int d = 0; d < 4; d++) {
+//                 int ni = x + dx[d];
+//                 int nj = y + dy[d];
+//                 if (isValid(ni, nj) && !vis[ni][nj]) {
+//                     dist[ni][nj] = dist[x][y] + 1;
+//                     vis[ni][nj] = 1;
+//                     q.push({ni, nj});
+//                 }
+//             }
+//         }
+
+//         return dist;
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
