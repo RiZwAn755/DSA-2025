@@ -8,7 +8,7 @@
 // int n  , m ; 
 // vector<int>visited;
 
-// void dfs(int i)
+// void dfs(int i)   // TC = O(N+2M)  , SC = O(N)
 // {
 //     visited[i] = 1;
 //     for(auto it : g[i])
