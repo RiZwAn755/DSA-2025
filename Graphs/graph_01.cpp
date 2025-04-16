@@ -7,6 +7,7 @@
                                 
                                 // low edges count  --> sparce graph   -->  edges < n^(3/2)
                                 // high edges count --> dense graph    ---> edges  > n^(3/2)
+                                // number of possible edges = nC2;
                                 
                                 // degree - defined for each node
                                 //  sum of degree = 2*|edges count| 
@@ -31,7 +32,11 @@
                                 
                                 // (DAG): directed acyclic grapgh: 
                                 
-                                
+                                // DFS => T.C = O(N + 2M) => N for nodes and 2M int for loop 
+                                // DF => S.C = O(N)  => for storing visited nodes
+
+                                // BFS => T.C = O(N + 2M) => N for nodes and 2M int for loop 
+                                // BFS => S.C = O(N ) => N for visited array
                                 
                             
 
