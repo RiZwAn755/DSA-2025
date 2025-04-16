@@ -23,7 +23,7 @@
 //               int n = image.size();
 //               int m = image[0].size();
               
-//                 vis[i][j] = -2;
+//                 vis[i][j] = -2; // bcoz the elements are postive
 //                 ans[i][j]  = color;
 //                 for(int d =0 ; d < 4 ; d++)
 //                 {
