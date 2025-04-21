@@ -1,3 +1,8 @@
+// 0 => empty cell
+// 1 => fresh orange
+// 2 => rotten orange
+
+
 class Solution {
 public:
     vector<vector<int>> g;
