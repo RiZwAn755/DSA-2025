@@ -1,9 +1,12 @@
 // a node is terminal node if it have zero out degree 
 // a node is safe node if all paths from it leads to a terminal node 
-// return the array containg all th esafe nodes
+// return the array containg all the safe nodes
 
+// observation : 
 // terminal node itself is a safe node
 // anyone part of a cycle and nodes which lead to cycle cant be safe node
+
+// code 
 
 // class Solution {
 //     public: 
@@ -37,7 +40,7 @@
 //                 return true;
 //             }
 //         }
-//         check[node] =1 ; // kyuki agr cycle hoga to to wo phle hih return ho jata , code yha phucha matlb ye safe node h 
+//         check[node] =1 ; // kyuki agr cycle hoga to to wo phle hi return ho jata , code yha phucha matlb ye safe node h 
 //         pathVis[node] = 0;
 //         return false;
 //        }

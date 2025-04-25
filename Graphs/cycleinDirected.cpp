@@ -1,8 +1,8 @@
 
 
-// cycle detection in a dorected graph and how its different fromundirected graph
+// cycle detection in a directed graph and how its different from undirected graph
 
-// in directed we just visited the nodes and if the child node was not visited by it we say it have cycle,
+// in undirected we just visited the nodes and if the child node was not visited by it we say it have cycle,
 // but herein case of directed , suppose we have a node from where we have two branch , dfs goes in one directon marking all node ,
 // now it comes back to the parent node now while traversing in second branch , if it find someone marked then we wont say it have cycle.
 
@@ -12,9 +12,9 @@
 
 // solution :)
 
-// like visited array , we can have on e more array which will be marked 1  when its included in any path , and while coming back 
-// we set it back to zero  then if we find a node visited and its path[i] = 0 , then we say it have a cycle
-// path[i] == 0 => not in same path else its in same path
+// like visited array , we can have one more array which will be marked 1  when its included in any path , and while coming back 
+// we set it back to zero  then if we find a node visited and its path[i] = 1, then we say it have a cycle
+// path[i] == 0 => not in same path else its in same path , if in same path the visited node found then cycle is present
 // .
 
 
