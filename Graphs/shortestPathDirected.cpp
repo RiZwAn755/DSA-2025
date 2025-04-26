@@ -27,21 +27,21 @@
 //         }
 //         st.push(i);
 //     }
-    void dfs(int i , stack<int>& st) // for topo sort.
-    // we used toposort to ensure that the node on which we sre currently have its parents correct distance already
-    {
-        vis[i] = 1;
-        for(auto it : g[i])
-        {
-            int childnode = it.first;
-            int wt = it.second ;
-            if(!vis[childnode])
-            {
-                dfs(childnode , st);
-            }
-        }
-        st.push(i);
-    }
+    // void dfs(int i , stack<int>& st) // for topo sort.
+    // // we used toposort to ensure that the node on which we sre currently have its parents correct distance already
+    // {
+    //     vis[i] = 1;
+    //     for(auto it : g[i])
+    //     {
+    //         int childnode = it.first;
+    //         int wt = it.second ;
+    //         if(!vis[childnode])
+    //         {
+    //             dfs(childnode , st);
+    //         }
+    //     }
+    //     st.push(i);
+    // }
 
     
 //       vector<int> shortestPath(int V, int E, vector<vector<int>>& e) 
