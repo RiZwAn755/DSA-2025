@@ -3,7 +3,7 @@
 
 // approach 1 : run two loops i from 0 to less than n, and j from i+1 to less than n.  => o(n^2)
 
-// approach 2 : run a loop and keep trak of max_profit and currebt profit
+// approach 2 : run a loop and keep trak of max_profit and current profit
 
 
 // code:
