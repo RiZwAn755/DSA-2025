@@ -24,45 +24,49 @@
 // ==>  on nth relaxation if distance array gets updated ==> theres neg cycle
 
 
+// time comlexity => O(V*E)
+// space complexity => O(N)
+
+
 // code ::
 
-// class Solution {
-//     public:
+class Solution {
+    public:
     
   
-//     vector<int>dist;
-//     int n , m ; 
+    vector<int>dist;
+    int n , m ; 
     
-//       vector<int> bellmanFord(int V, vector<vector<int>>& e, int src) 
-//       {
-//          n = V; 
-//          m = e.size();
+      vector<int> bellmanFord(int V, vector<vector<int>>& e, int src) 
+      {
+         n = V; 
+         m = e.size();
          
-//          dist.assign(n , 1e8);
+         dist.assign(n , 1e8);
      
-//         dist[src] = 0;  // making the sorce dist to be zero
+        dist[src] = 0;  // making the sorce dist to be zero
          
-//          for(int i =0 ; i < n-1 ; i++)
-//          {
-//              for(int j = 0 ; j < m; j++)
-//              {
-//                  if(dist[e[j][0]] != 1e8 &&  dist[e[j][1]] > dist[e[j][0]] + e[j][2])
-//                  {
-//                      dist[e[j][1]] = dist[e[j][0]] + e[j][2];
-//                  }
-//              }
-//          }
+         for(int i =0 ; i < n-1 ; i++)
+         {
+             for(int j = 0 ; j < m; j++)
+             {
+                 if(dist[e[j][0]] != 1e8 &&  dist[e[j][1]] > dist[e[j][0]] + e[j][2])
+                 {
+                     dist[e[j][1]] = dist[e[j][0]] + e[j][2];
+                 }
+             }
+         }
          
-//       //   nth relaxation to check neg cycle 
+      //   nth relaxation to check neg cycle 
       
-//              for(int j =0 ; j < m; j++)
-//              {
-//                 if(dist[e[j][0]]!= 1e8 &&  dist[e[j][1]] > dist[e[j][0]] + e[j][2])
-//                  {
-//                      return {-1}; // neg cycle detected
-//                  }
-//               }
+             for(int j =0 ; j < m; j++)
+             {
+                if(dist[e[j][0]]!= 1e8 &&  dist[e[j][1]] > dist[e[j][0]] + e[j][2])
+                 {
+                     return {-1}; // neg cycle detected
+                 }
+              }
          
-//          return dist;
-//       }
-//   };
+         return dist;
+      }
+  };
