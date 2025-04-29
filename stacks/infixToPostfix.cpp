@@ -37,9 +37,9 @@ int main() {
 	for (int i = 0; i < n; i++) 
 	{
 		char ch = s[i];
-		if (mp.find(ch) == mp.end() && ch != '(' && ch != ')') 
+		if (mp.find(ch) == mp.end() && ch != '(' && ch != ')')  // if current element is not a operator and not a bracket
 		{
-			ans += ch;
+			ans += ch; // add directly into ans.
 		}
 	
 		else if (ch == '(') 
