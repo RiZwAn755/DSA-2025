@@ -11,7 +11,7 @@
 
 // --------------------------------- priority queue method --------------------------------------------- 
 
-// we use min heap priority queue <dist , node> .
+// we use min heap priority queue <dist , node>.
 
 // class Solution {
 //     public:

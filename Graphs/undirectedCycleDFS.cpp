@@ -19,7 +19,7 @@ bool dfs(int src , int pr)
        {
            dfs(it , src); // parent is src
        }
-       else if(it != pr ) // 'it' is visited and its not parent then its cycle
+       else if(it != pr ) // 'it' is visited and it is not parent then its cycle
        {
            return true;
        }
