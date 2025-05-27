@@ -193,3 +193,126 @@
       
 //       return ans;
 //     }
+
+// --------------------------- Iterative post order (Two stacks) -------------------
+
+// vector<int> PostOrder(Node* root)
+// {
+//     vector<int>ans;
+//     stack<Node*>st1 , st2 ;
+
+//     st1.push(root);
+
+//     while(!st1.empty())
+//     {
+//         Node* x = st1.top();
+//         st1.pop();
+//         st2.push(x);
+
+
+//         if(x -> left) st1.push(x -> left);
+//         if(x -> right) st1.push(x -> right);
+//     }
+    
+//     while(!st2.empty())
+//     {
+//         ans.push_back(st2.top() -> data);
+//         st2.pop();
+//     }
+
+//     return ans;
+
+// }
+
+// ---------------------  Post Order using single stack -----------------------------
+
+// in recurrsion we were doing 
+//   1. left 
+//   2. right
+//   3. print
+
+// means keep on going left till we find null ,
+// then go right , if we find a null then again keep going left 
+// then after that we print
+
+    // vector<int>PostOrder(Node* root)
+    // {
+    //     Node* curr = root; 
+    //     stack<Node* >st;
+    //     while(curr != nullptr || ! st.empty()) // while curr is not null or stack is not empty
+    //     {
+    //          if(curr != nullptr)
+    //          {
+    //             st.push(curr);
+    //             curr = curr -> left ;
+    //          }
+
+    //          else 
+    //          {
+    //             Node* temp = st.top() -> right;
+    //             if(temp == nullptr)
+    //             {
+    //                 temp = st.top();
+    //                 st.pop();
+    //                 ans.push_back(temp -> data);
+
+    //                 while(!st.empty() && temp == st.top() -> right)
+    //                 {
+    //                     temp = st.top();
+    //                     st.pop();
+    //                     ans.push_back(temp -> data);
+    //                 }
+    //             }
+    //             else 
+    //                 curr = temp; // to loop again in left
+    //          }
+    //     }
+    //     return ans;
+    // }
+
+
+    // ------------------------ all three traversal in one code using one stack ------------------------
+
+    //  if number is 1 => push it in preOrder and num++ ,if theres a  Left also put it in stack
+    //  else if num is 2 => push it in inorder and num++ , if theres a  Right also put it in stack
+    //  else if num is 3 => push it in postOrder 
+
+    //  vector<vector<int> AllTraversal(Node* root)
+    //  {
+    //     stack<pair<Node* , int>> st;
+    //     vector<int>pre , in , post ;
+    //     vector<vector<int>>ans;
+
+    //     st.push({root , 1});
+    //     while(!st.empty()){
+
+    //         auto &it = st.top();
+    //         if(it.second == 1)
+    //         {
+    //            pre.push_back(it.first -> data);
+    //            it.second++;
+    //            if(it.first -> left)
+    //            {
+    //             st.push(it.first -> left , 1);
+    //            }
+    //         }
+    //         else if(it.second == 2)
+    //         {
+    //              in.push_back(it->first->data);
+    //              it.second++;
+    //              if(it.first -> right)
+    //              {
+    //                 st.push(it.first -> right , 1);
+    //              }
+    //         }
+    //         else 
+    //         {
+    //             post.push_back(it.first -> data) ;
+    //         }
+    //     }
+    //     ans.push_back(pre);
+    //     ans.push_back(in);
+    //     ans.push_back(post);
+
+    //     return ans;
+    //  }
