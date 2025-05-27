@@ -128,3 +128,68 @@
         
 //     }
   
+// ---------------- iteartive pre-order (Stack) ---------------------------------
+
+// Approach : take the root put it in stack , then push stacks's right then left in the stack , 
+// bcoz stack is LIFO so left will come out first.and its children will be pushed in stack after its printing.
+
+//  vector<int> preorder(Node* root) {
+        
+//         vector<int>ans;
+//         stack<Node*>st;
+//         st.push(root);
+        
+//         while(!st.empty())
+//         {
+//             Node* x = st.top();
+//             ans.push_back(x -> data);
+//             st.pop();
+//             if(x -> right != nullptr) st.push(x -> right); // pushing right element first
+//             if(x -> left != nullptr) st.push(x -> left); // then left , bcoz of stacks LIFO order
+//         }
+        
+//         return ans;
+        
+//     }
+
+
+// ----------- iterative inorder --------------------
+
+// Approach: make a stack push the root in stack 
+// then while stack is not empty we will 
+// first push the root and all possile lefts in the stack, now take the top element and push its data in ans,
+// then move to right data 
+
+// vector<int> inOrder(Node* root) 
+//     {
+        
+//       vector<int>ans;
+//       stack<Node*>st;
+//       Node* node = root;
+      
+//       while(true)
+//       {
+//           if(node != nullptr)
+//           {
+//               st.push(node); 
+//               node = node -> left;
+//           }
+//           else 
+//           {
+//               if(st.empty())
+//               {
+//                   break;
+//               }
+              
+//               node = st.top();
+//               st.pop();
+              
+//               ans.push_back(node -> data);
+//               node = node -> right;
+//           }
+//       }
+      
+    
+      
+//       return ans;
+//     }
