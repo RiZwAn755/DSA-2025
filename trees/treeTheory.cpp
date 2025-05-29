@@ -169,6 +169,7 @@
       
 //       while(true)
 //       {
+//          till we reach null ,while taking lefts of all node
 //           if(node != nullptr)
 //           {
 //               st.push(node); 
