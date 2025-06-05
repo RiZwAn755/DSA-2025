@@ -17,7 +17,7 @@ bool dfs(int src , int pr)
    {
        if(vis[it].first != 1)
        {
-           dfs(it , src); // parent is src
+           if(dfs(it , src)) return true; // parent is src
        }
        else if(it != pr ) // 'it' is visited and it is not parent then its cycle
        {

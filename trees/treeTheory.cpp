@@ -239,7 +239,7 @@
     // vector<int>PostOrder(Node* root)
     // {
     //     Node* curr = root; 
-    //     stack<Node* >st;
+    //     stack<Node*>st;
     //     while(curr != nullptr || ! st.empty()) // while curr is not null or stack is not empty
     //     {
     //          if(curr != nullptr)
@@ -281,7 +281,7 @@
     //  vector<vector<int> AllTraversal(Node* root)
     //  {
     //     stack<pair<Node* , int>> st;
-    //     vector<int>pre , in , post ;
+    //     vector<int> pre , in , post ;
     //     vector<vector<int>>ans;
 
     //     st.push({root , 1});

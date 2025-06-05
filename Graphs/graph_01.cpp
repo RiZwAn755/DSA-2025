@@ -33,7 +33,7 @@
                                 // (DAG): directed acyclic grapgh: 
                                 
                                 // DFS => T.C = O(N + 2M) => N for nodes and 2M int for loop 
-                                // DF => S.C = O(N)  => for storing visited nodes
+                                // DFS => S.C = O(N)  => for storing visited nodes
 
                                 // BFS => T.C = O(N + 2M) => N for nodes and 2M int for loop 
                                 // BFS => S.C = O(N ) => N for visited array

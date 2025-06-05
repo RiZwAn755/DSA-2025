@@ -20,7 +20,7 @@ bool bfs(int src)
     while(!q.empty())
     {
         auto x = q.front();
-        // x.first = child 
+        // x.first = node 
         // x.second = parent
         q.pop();
         for(auto it : g[x.first])
