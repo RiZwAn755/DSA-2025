@@ -25,7 +25,7 @@
  vector<vector<int>> verticalTraversal(TreeNode* root) {
         
         map<int , map<int , multiset<int>> > mp ; // verticle  => levels => nodes
-        queue< pair<TreeNode* ,  pair<int ,int>> >q; // {node ,verticle , level}
+        queue< pair<TreeNode* ,  pair<int ,int>> >q; // {node ,v {erticle , level} }
         q.push({root,   {0 , 0}});
         
         //  doing bfs , on moving left verticle -= 1 , right verticle += 1;
