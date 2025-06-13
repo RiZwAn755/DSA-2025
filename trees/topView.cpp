@@ -2,10 +2,10 @@
 // first node of each verticle will be our answer
  
  vector<int> topView(Node *root) {
-    if (!root) return {}; // handle empty tree case
+    if (!root) return {}; 
     
-    queue<pair<Node*, int>> q; // node, vertical
-    map<int, Node*> mp; // vertical, node
+    queue<pair<Node*, int>> q; // {node, vertical}
+    map<int, Node*> mp; // {vertical, node}
     
     q.push({root, 0});
     
@@ -16,9 +16,9 @@
         q.pop();
         
         // Only store the first node we encounter at each vertical position
-        
+        if( mp.find(verticle) == mp.end())
             mp[vertical] = node;
-        }
+        
         
         if (node->left) q.push({node->left, vertical - 1});
         if (node->right) q.push({node->right, vertical + 1});
