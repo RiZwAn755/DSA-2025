@@ -1,6 +1,7 @@
  void preOrder(TreeNode* root , TreeNode*& ans)
       {
         if(!root) return ;
+        // store them so that we wont loose their access.
         TreeNode* left = root -> left;
         TreeNode* right = root -> right;
 
