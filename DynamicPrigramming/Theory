@@ -1,0 +1,83 @@
+ 
+ A famous quote for DP :
+
+ "Those who cant remember are condemned to repeat" _ 
+
+
+ Dynamic Programming 
+ 
+ 1. Tabulation (bottom up)
+
+ 2. Memoization (Top Down )
+
+
+
+ ------------------------------ Dynamic Programming -------------------------------
+
+ 1 Fibbonacchi number
+
+ 0 1 1 2 3 5 8 .......
+
+ recurrence relation  = f(n) = f(n-1) + f(n-2) ;
+
+ recuerrsive code for it :-
+
+ int f(int n)
+ {
+    if(n <= 1) return n ;
+
+    return f(n-1 ) + f(n-2) ; 
+ }
+
+ recurion tree :- 
+
+                                f(4)
+                           f(3)            f(2)
+                     f(2)         f(1)
+
+
+                      here we had to call f(2) multiple times , Its known as overLapping subproblem
+
+                      to solve the overLapping subproblem , Memoization comes in Light , it stores subproblem in some map or table
+                      here we have one parameter in f(x) , so we create a one-D array
+
+                      code of Fibbonacchi using Memoization
+
+                       int dp[10010];
+
+                       int f(int n)
+                       {
+                        if(n <=1 ) return n;
+
+                        if(dp[n] != -1) return dp[n];
+                       
+                        return dp[n] = f(n-1) + f(n-2) ;   // save and return 
+                                                           // i.e solution to this subproblem is f(n) = dp[n]
+                        
+                       }
+
+
+                       time Complexity =  O(N)
+                       space Complexity = O(N) (recurion stack) + O(N) (Array)
+
+
+
+                       recuerrsion => Tabulation 
+
+                       recussion is Top down i.e it goes to required function call if it reches base case it returns 
+                       while Tabulation starts from base case
+
+                       dp[0] = 0;
+                       dp[1] = 1;
+
+                       for(int i =  2 ; i< n; i++)
+                       {
+                        dp[i] = dp[i-1] + dp[i-2] ;
+                       }
+
+                       it is in Tabulation form 
+
+
+
+ 
+ 
