@@ -26,12 +26,12 @@ public:
    {
     if(n <= 2) return n;
 
-       // faith
+      
        if(dp[n] != -1) return dp[n];
 
  // 1 steps me phuch sakte h  + 2 steps me phuch sakte h , store the sum of both
             dp[n] =  rec(n-1 , dp) + rec(n-2 , dp) ;
-       // expectaion 
+   
        return dp[n] ;
    }
 
@@ -63,3 +63,7 @@ public:
         return dp[n];
     }
 };
+
+
+we can do space optimization by using two variables to store the results of the previous two steps.
+O(1) space complexity

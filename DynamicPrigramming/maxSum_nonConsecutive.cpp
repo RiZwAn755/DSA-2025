@@ -50,8 +50,8 @@ int maximumNonAdjacentSum(vector<int> &nums)
 {
     vector<int>dp(nums.size() , 0);
     int n = nums.size();
-   dp[0] = nums[0] ; 
-   int neg = 0 ; 
+    dp[0] = nums[0] ; 
+    int neg = 0 ; 
 
    for(int i = 1 ; i  < n; i++)
    {
