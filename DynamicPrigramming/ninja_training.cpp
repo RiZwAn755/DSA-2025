@@ -2,9 +2,8 @@
 //            ninja is planning a n days long training program.
 //            each day he can either do a pushup or a situp or a pullup.
 //            each day he can do only one activity.
-//            he can do multiple activities on the same day.
 //            he can not do the same activity on consecutive days.
-//            he can not do more than one activity on the same day.
+        //    he can not do more than one activity on the same day.
 
 // You are given a 2D array of size N*3 ‘POINTS’ with the points corresponding to each day and activity. 
 // Your task is to calculate the maximum number of merit points that Ninja can earn.

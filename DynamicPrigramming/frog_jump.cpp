@@ -1,4 +1,4 @@
-    question : theres a from on first step and frog can jump to stair[i+1] or stair[i+2] at a time
+    question : Theres a from on first step and frog can jump to stair[i+1] or stair[i+2] at a time
     energy used to jump to stair[j] from stair[i] is abs(stair[j-1] - stair[i-1])
     find the minimum energy frog can use to reach the top
 
