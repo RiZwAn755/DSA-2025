@@ -12,7 +12,7 @@
 
 // REALX ALL EDGES N-1 TIMES SEQUENTIALLY (N = # of nodes).
 // edges can be in any order 
-// why exactly N-1 relaxation  ?????
+// why exactly N-1 relaxation  ????? bcoz we will compute the distance from all remaining node to it and then find the minimum  distance 
 
 // ==> A shortest path between two vertices can have at most (V – 1) edges. It is not possible to have a simple path with more than (V – 1) edges 
 // (otherwise it would form a cycle).
