@@ -96,3 +96,16 @@ vector<vector<int>> sprev(n+1) , curr(n+1);
 
   
 
+// printing lcs 
+
+string rec(int i, int j, string& s, string& t) {
+    if(i >= s.size() || j >= t.size()) return "";
+
+    if(s[i] == t[j]) {
+        return s[i] + rec(i+1, j+1, s, t); // Include matching character
+    } else {
+        string a = rec(i+1, j, s, t);       // Skip s[i]
+        string b = rec(i, j+1, s, t);       // Skip t[j]
+        return (a.size() > b.size()) ? a : b;
+    }
+}
