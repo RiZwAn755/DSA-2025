@@ -9,7 +9,8 @@
     
     q.push({root, 0});
     
-    while (!q.empty()) {
+    while (!q.empty()) 
+    {
         auto x = q.front();
         Node* node = x.first;
         int vertical = x.second;

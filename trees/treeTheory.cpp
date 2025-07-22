@@ -225,7 +225,7 @@
 
 // }
 
-// ---------------------  Post Order using single stack -----------------------------
+// ----------------------- Post Order using single stack -----------------------------
 
 // in recurrsion we were doing 
 //   1. left 

@@ -1,7 +1,7 @@
 
 // we have to print verticle traversal of the tree  
 // for this we find each nodes loaction as coordinates of verticle and level 
-// so root at root we take reference and take it as 0 verticle , left to it minus and right to it plus
+// so  at root we take reference and take it as 0 verticle , left to it minus and right to it plus
 // so the coordinate of root in this coordinate system will be (0,0) , its left's coordinate will be (-1 , 0)  : {(verticle , level)}
 
 // if we have to overlapping nodes then we store smaller first
@@ -17,7 +17,7 @@
 
 
 // here we take a queue which will store (node , {verticle , level})
-// along with this we will use a  map<int ,map<int , multiset<int>>>  :  (verticle , {level , nodes}) :- each verticle will have multiple level and each level will have multiple nodes
+// along with this we will use a  map<int ,map<int , multiset<int>>>  :  (verticle , {level , nodes in that level}) :- each verticle will have multiple level and each level will have multiple nodes
 //w e are using multiset bcoz nodes may be repetive
 
 // code: 
