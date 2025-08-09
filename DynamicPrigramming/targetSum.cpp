@@ -13,7 +13,8 @@ int rec(int i, vector<int>& nums, int t, vector<vector<int>>& dp, int x)
         {
             return t == 0;
         }
-            if (t + x < 0 || t + x > 2 * x) return 0;
+        
+        if (t + x < 0 || t + x > 2 * x) return 0;
         if (dp[i][t + x] != -1) return dp[i][t + x];
 
         int plus = rec(i + 1, nums, t - nums[i], dp, x);

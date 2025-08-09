@@ -12,10 +12,12 @@
         // 2. string 2 gets exhausted 
 
         // if both gets exhausted return true, else false;
+        // s = "abc"
+        // t = "abcdd*r"
 
-        if(i >= s.size() && j >= t.size()) return true ;
-        if(i >= s.size() && j <t.size()) { for(int p = j; p < t.size() ;p++) { if(t[p] != '*') return false; } return true ; }
-        if(i < s.size() && j >= t.size() ) {for(int p = i ; p < s.size() ;p++) { if(s[p] != '*') return false; } return true ; }
+        if(i >= s.size() && j >= t.size()) return true ; // both strings exhausted
+        if(i >= s.size() && j <t.size()) { for(int p = j; p < t.size() ;p++) { if(t[p] != '*') return false; } return true ; } // s exhausted, => t ke saare baaki elements * hone chahiye
+        if(i < s.size() && j >= t.size() ) {for(int p = i ; p < s.size() ;p++) { if(s[p] != '*') return false; } return true ; } // t exhausted => s ke saare baaki elements * hone chahiye
 
          if(dp[i][j] != -1) return dp[i][j] ;
 

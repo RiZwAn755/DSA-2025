@@ -1,4 +1,4 @@
-question : given a array return true if any subsequense sum is k 
+// question : given a array return true if any subsequense sum is k 
 
 
 #include <bits/stdc++.h> 
