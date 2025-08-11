@@ -69,3 +69,38 @@ int LIS (int i , vector<int>& nums , int prev_idx)
     return [0][-1+1];
 
 }
+
+
+// another approach :- dp[i] LIS ending at position i.
+
+int LIS(vector<int>& nums)
+{
+   vector<int>dp(nums.size() , 1);
+
+   int maxi = -1e5;
+
+   for(int idx =0 ; idx < nums.size() ; idx++)
+   {
+    for(int prev = 0 ; prev < idx ; prev++)
+    {
+        if(nums[prev] < nums[idx])
+        dp[idx] = max(dp[idx] , 1+dp[prev]);
+    }
+
+    maxi = max(maxi , dp[idx]);
+   }
+
+   return maxi;
+}
+
+TC : N^2 
+
+
+// OPTIMIZING USING HASH ARRAY and printing Lis
+
+// LIS using binary search
+
+
+
+
+
